@@ -10,15 +10,13 @@
         var message=document.getElementById("nyuuryoku")
         message=message.value
         message=message.replace(/\s/g,"")
-        message=message.replace(/・/g,"\n")
+        message=message.replace(/。・/g,"。\n")
         message=message.replace(/，/g,"、")
-        message=message.replace(/\n/,"")
         document.getElementById("hensyuugo").value=message
     }
     </script>
 </head>
 <body>
-  元の文<br>
     <textarea id="nyuuryoku" rows="20" cols="80"></textarea><br>
     <button  onclick="hensyuu()">入力が終わったらクリック</button>  
     <br>⇓<br>編集後<br>
