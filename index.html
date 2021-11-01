@@ -9,6 +9,7 @@
     function hensyuu(){
         var message=document.getElementById("nyuuryoku")
         message=message.value
+        if(message.match(/^・/)){message=message.replace(/・/,"")}
         message=message.replace(/\s/g,"")
         message=message.replace(/。・/g,"。\n")
         message=message.replace(/，/g,"、")
