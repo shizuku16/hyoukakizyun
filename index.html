@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>評価基準の体裁を整える</title>
+    <script>
+    function hensyuu(){
+        var message=document.getElementById("nyuuryoku")
+        message=message.value
+        message=message.replace(/\s/g,"")
+        message=message.replace(/・/g,"\n")
+        message=message.replace(/，/g,"、")
+        message=message.replace(/\n/,"")
+        document.getElementById("hensyuugo").value=message
+    }
+    </script>
+</head>
+<body>
+  元の文
+    <textarea id="nyuuryoku" rows="20" cols="80"></textarea><br>
+    <button  onclick="hensyuu()">入力が終わったらクリック</button>  
+    <br>⇓<br>編集後<br>
+    <textarea id="hensyuugo" rows="20" cols="80"></textarea>
+</body>
+</html>
